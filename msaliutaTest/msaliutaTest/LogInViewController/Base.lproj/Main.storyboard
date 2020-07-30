@@ -93,7 +93,7 @@
                         <outlet property="errorLabel" destination="0yl-9x-RL4" id="Dm5-Ew-JQN"/>
                         <outlet property="loginTextField" destination="Q6P-sy-CIf" id="ziH-Mk-cip"/>
                         <outlet property="passwordTextField" destination="4SQ-il-Vnv" id="jbm-O0-r4y"/>
-                        <segue destination="PFM-e8-DxQ" kind="show" identifier="next" id="a6W-Fd-HXv"/>
+                        <segue destination="PFM-e8-DxQ" kind="show" identifier="toAppListViewController" id="a6W-Fd-HXv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

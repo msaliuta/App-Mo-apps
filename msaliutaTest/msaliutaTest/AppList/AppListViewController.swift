@@ -63,9 +63,8 @@ extension AppListViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? AppListCell else{
                 return UITableViewCell()
         }
-        let image = self.api.getImage(from: (data.applicationIcoUrl)!)
         
-        cell.configure(with: data, image: image)
+        cell.configure(with: data)
         return cell
     }
     

@@ -22,14 +22,14 @@ class AppListCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(with appListData: AppsData?, image: UIImage?){
+    func configure(with appListData: AppsData?){
+        appLogoImage.downloaded(from: (appListData?.applicationIcoUrl)!)
         applicationNameLabel.text = appListData?.applicationName
         applicationStatusLabel.text = appListData?.applicationStatus == false ? "Не закончено" : "Закончено"
         applicationStatusImage.image = appListData?.applicationStatus == false ? UIImage(named: "noFinished") :
         UIImage(named: "finished")
         endOfPaymentLabel.text = appListData?.isPayment == false ? "Не оплачено" : "Оплачено"
         endOfPaymentImage.image = appListData?.isPayment == false ? UIImage(named: "nopaid") : UIImage(named: "paid")
-        appLogoImage.image = image
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
