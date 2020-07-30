@@ -23,6 +23,7 @@ class AppListCell: UITableViewCell {
     }
     
     func configure(with appListData: AppsData?){
+        appLogoImage.image = .none
         appLogoImage.downloaded(from: (appListData?.applicationIcoUrl)!)
         applicationNameLabel.text = appListData?.applicationName
         applicationStatusLabel.text = appListData?.applicationStatus == false ? "Не закончено" : "Закончено"

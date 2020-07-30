@@ -10,13 +10,14 @@ import UIKit
 import SafariServices
 
 class AppListViewController: UIViewController {
-
+    
     @IBOutlet weak var appListTableView: UITableView!
     
     let api = Api()
     var projectResponse: AppsResponse? = nil
     var userToken: String?
     let cellId = "appListCell"
+    var logoImage: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,7 @@ class AppListViewController: UIViewController {
             }
         }
     }
-
+    
 }
 
 extension AppListViewController: UITableViewDelegate {
