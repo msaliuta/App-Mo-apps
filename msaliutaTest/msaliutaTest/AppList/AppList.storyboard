@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ciS-gi-PGO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gEZ-ga-hHv">
+            <objects>
+                <navigationController id="ciS-gi-PGO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lwc-OD-73O">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gVE-Si-O3Z" kind="relationship" relationship="rootViewController" id="08g-q6-2hP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wN-tA-zrc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-859" y="78"/>
+        </scene>
+        <!--App list-->
+        <scene sceneID="ogk-rr-HaB">
+            <objects>
+                <viewController id="gVE-Si-O3Z" customClass="AppListViewController" customModule="msaliutaTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZf-lY-Wjv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ogy-gi-VOq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ogy-gi-VOq" firstAttribute="top" secondItem="4N2-Ge-nIz" secondAttribute="top" id="9eS-cF-W59"/>
+                            <constraint firstItem="4N2-Ge-nIz" firstAttribute="trailing" secondItem="Ogy-gi-VOq" secondAttribute="trailing" id="aBp-As-CA3"/>
+                            <constraint firstItem="Ogy-gi-VOq" firstAttribute="leading" secondItem="4N2-Ge-nIz" secondAttribute="leading" id="ypz-Bg-F3p"/>
+                            <constraint firstItem="4N2-Ge-nIz" firstAttribute="bottom" secondItem="Ogy-gi-VOq" secondAttribute="bottom" id="z1F-DA-jiB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4N2-Ge-nIz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="App list" id="n8R-NE-yrC"/>
+                    <connections>
+                        <outlet property="appListTableView" destination="Ogy-gi-VOq" id="wke-dy-eQ3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcd-qe-oJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="78"/>
+        </scene>
+    </scenes>
+</document>
